@@ -1,0 +1,2 @@
+# Camera motor
+/(vendor|system)/bin/hw/pa\.camera\.motor(/.*)?               u:object_r:hal_pa_camera_motor_default_exec:s0
