@@ -1,2 +1,4 @@
 # HALs
 hal_attribute(pa_fod)
+hal_attribute(pa_camera_motor)
+
