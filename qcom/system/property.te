@@ -1,0 +1,4 @@
+type vendor_camera_prop, property_type;
+
+# Audio props
+type vendor_audio_prop, property_type;
