@@ -1,0 +1,1 @@
+allow bootanim mediametrics:binder { call };
