@@ -1,3 +1,5 @@
+allow update_engine self:capability { dac_override dac_read_search sys_rawio };
+
 # Read updates from storage data
 r_dir_file(update_engine, mnt_user_file)
 r_dir_file(update_engine, storage_file)
