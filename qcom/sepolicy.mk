@@ -14,10 +14,16 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/pa/sepolicy/qcom/dynamic \
     device/pa/sepolicy/qcom/system-only
 else
 BOARD_SEPOLICY_DIRS += \
-    device/pa/sepolicy/qcom/dynamic \
     device/pa/sepolicy/qcom/vendor
+endif
+
+ifeq ($(call is-board-platform-in-list, msm8909 msm8937 msm8953 msm8996 msm8998 sdm660 apq8084 msm8226 msm8909 msm8916 msm8952 msm8960 msm8974 msm8976 msm8992 msm8994),true)
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
+    device/pa/sepolicy/qcom/dynamic-legacy-um
+else
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
+    device/pa/sepolicy/qcom/dynamic
 endif
