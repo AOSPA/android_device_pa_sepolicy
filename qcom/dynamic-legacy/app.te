@@ -1,0 +1,2 @@
+# Allow appdomain to get camera properties
+get_prop(appdomain, camera_prop)
