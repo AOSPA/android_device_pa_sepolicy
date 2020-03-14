@@ -1,0 +1,2 @@
+persist.vendor.ese.                        u:object_r:nfc_prop:s0
+persist.nfc.config_file_name               u:object_r:nfc_prop:s0
