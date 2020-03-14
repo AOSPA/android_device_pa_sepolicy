@@ -1,6 +1,10 @@
+# Camera
 camera.                           u:object_r:camera_prop:s0
 persist.camera.                   u:object_r:persist_camera_prop:s0
 persist.vendor.camera.            u:object_r:persist_camera_prop:s0
 ro.camera.                        u:object_r:camera_prop:s0
 ro.vendor.camera.                 u:object_r:vendor_camera_prop:s0
 vendor.camera.                    u:object_r:vendor_camera_prop:s0
+
+# Radio
+persist.vendor.qmi_log_on         u:object_r:vendor_radio_prop:s0
