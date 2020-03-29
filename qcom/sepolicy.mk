@@ -25,6 +25,12 @@ ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY),true)
 else
     BOARD_SEPOLICY_DIRS += \
         device/pa/sepolicy/qcom/vendor
+
+    ifeq ($(filter true,$(TARGET_USES_QCOM_LEGACY_SEPOLICY) $(TARGET_USES_QCOM_LEGACY_UM_SEPOLICY) $(TARGET_USES_QCOM_LEGACY_PRE_UM_SEPOLICY)),true)
+        BOARD_SEPOLICY_DIRS += \
+            device/pa/sepolicy/qcom/vendor-legacy
+    endif
+
     ifeq ($(TARGET_USES_QCOM_LATEST_SEPOLICY),true)
         BOARD_SEPOLICY_DIRS += \
             device/pa/sepolicy/qcom/dynamic
