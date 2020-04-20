@@ -1,2 +1,3 @@
 vendor.pa.camera.motor::ICameraMotor            u:object_r:hal_pa_camera_motor_hwservice:s0
 vendor.pa.biometrics.fingerprint.inscreen::IFingerprintInscreen    u:object_r:hal_pa_fod_hwservice:s0
+vendor.pa.powershare::IPowerShare    u:object_r:hal_pa_powershare_hwservice:s0

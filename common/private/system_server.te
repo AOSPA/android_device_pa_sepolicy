@@ -7,5 +7,6 @@ allow system_server adbroot_service:service_manager find;
 
 # Use HALs
 hal_client_domain(system_server, hal_pa_fod)
+hal_client_domain(system_server, hal_pa_powershare)
 
 add_service(system_server, longshot_service)
