@@ -1,2 +1,31 @@
 # Vendor Overlay
 /(product|system/product)/vendor_overlay/[0-9]+/bin/init\.qcom\.post_boot\.sh   u:object_r:qti_init_shell_exec:s0
+
+###############################################
+# same-process HAL files and their dependencies
+#
+/(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/libadreno_utils\.so       u:object_r:same_process_hal_file:s0
+/(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/libgsl\.so                u:object_r:same_process_hal_file:s0
+
+/(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/hw/vulkan\.adreno\.so         u:object_r:same_process_hal_file:s0
+/(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/libEGL_adreno\.so             u:object_r:same_process_hal_file:s0
+/(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/libGLESv1_CM_adreno\.so       u:object_r:same_process_hal_file:s0
+/(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/libGLESv2_adreno\.so          u:object_r:same_process_hal_file:s0
+/(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/libadreno_app_profiles\.so    u:object_r:same_process_hal_file:s0
+
+# RenderScript dependencies.
+# To test: run cts -m CtsRenderscriptTestCases
+/(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/libRSDriver_adreno\.so     u:object_r:same_process_hal_file:s0
+/(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/libCB\.so                  u:object_r:same_process_hal_file:s0
+/(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/libllvm-qgl\.so            u:object_r:same_process_hal_file:s0
+/(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/libbccQTI\.so              u:object_r:same_process_hal_file:s0
+/(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/libllvm-qcom\.so           u:object_r:same_process_hal_file:s0
+/(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/librs_adreno\.so           u:object_r:same_process_hal_file:s0
+/(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/librs_adreno_sha1\.so      u:object_r:same_process_hal_file:s0
+
+# libGLESv2_adreno depends on this
+/(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/libllvm-glnext\.so         u:object_r:same_process_hal_file:s0
+
+# libOpenCL and its dependencies
+/(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/libOpenCL\.so              u:object_r:same_process_hal_file:s0
+/(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/libq3dtools_adreno\.so     u:object_r:same_process_hal_file:s0
