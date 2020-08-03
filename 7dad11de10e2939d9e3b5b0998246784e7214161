@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c18e32e3_767a0fe1",
+        "filename": "qcom/dynamic/system_server.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000007
+      },
+      "writtenOn": "2020-08-03T22:46:16Z",
+      "side": 1,
+      "message": "If we need sepolicy to allow system server to access the node, wouldn\u0027t it make more sense to route the call from the power system service through the power hal?",
+      "revId": "7dad11de10e2939d9e3b5b0998246784e7214161",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": true
+    }
+  ]
+}
